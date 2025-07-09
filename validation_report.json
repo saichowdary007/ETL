@@ -1,0 +1,234 @@
+[
+  {
+    "table": "film_actor",
+    "sourceRows": 0,
+    "outputRows": 5462,
+    "integrityInvalid": 0,
+    "integrityTotal": 5462,
+    "passed": false
+  },
+  {
+    "table": "address",
+    "sourceRows": 0,
+    "outputRows": 603,
+    "integrityInvalid": 0,
+    "integrityTotal": 6065,
+    "passed": false
+  },
+  {
+    "table": "city",
+    "sourceRows": 0,
+    "outputRows": 600,
+    "integrityInvalid": 0,
+    "integrityTotal": 6665,
+    "passed": false
+  },
+  {
+    "table": "actor",
+    "sourceRows": 0,
+    "outputRows": 200,
+    "integrityInvalid": 0,
+    "integrityTotal": 6865,
+    "passed": false
+  },
+  {
+    "table": "actor_info",
+    "sourceRows": 0,
+    "outputRows": 200,
+    "integrityInvalid": 0,
+    "integrityTotal": 7065,
+    "passed": false
+  },
+  {
+    "table": "category",
+    "sourceRows": 0,
+    "outputRows": 16,
+    "integrityInvalid": 0,
+    "integrityTotal": 7081,
+    "passed": false
+  },
+  {
+    "table": "country",
+    "sourceRows": 0,
+    "outputRows": 109,
+    "integrityInvalid": 0,
+    "integrityTotal": 7190,
+    "passed": false
+  },
+  {
+    "table": "customer",
+    "sourceRows": 0,
+    "outputRows": 599,
+    "integrityInvalid": 0,
+    "integrityTotal": 7789,
+    "passed": false
+  },
+  {
+    "table": "customer_list",
+    "sourceRows": 0,
+    "outputRows": 599,
+    "integrityInvalid": 0,
+    "integrityTotal": 8388,
+    "passed": false
+  },
+  {
+    "table": "film_list",
+    "sourceRows": 0,
+    "outputRows": 997,
+    "integrityInvalid": 0,
+    "integrityTotal": 9385,
+    "passed": false
+  },
+  {
+    "table": "nicer_but_slower_film_list",
+    "sourceRows": 0,
+    "outputRows": 997,
+    "integrityInvalid": 0,
+    "integrityTotal": 10382,
+    "passed": false
+  },
+  {
+    "table": "film",
+    "sourceRows": 0,
+    "outputRows": 1000,
+    "integrityInvalid": 0,
+    "integrityTotal": 11382,
+    "passed": false
+  },
+  {
+    "table": "film_category",
+    "sourceRows": 0,
+    "outputRows": 1000,
+    "integrityInvalid": 0,
+    "integrityTotal": 12382,
+    "passed": false
+  },
+  {
+    "table": "inventory",
+    "sourceRows": 0,
+    "outputRows": 4581,
+    "integrityInvalid": 0,
+    "integrityTotal": 16963,
+    "passed": false
+  },
+  {
+    "table": "language",
+    "sourceRows": 0,
+    "outputRows": 6,
+    "integrityInvalid": 0,
+    "integrityTotal": 16969,
+    "passed": false
+  },
+  {
+    "table": "sales_by_film_category",
+    "sourceRows": 0,
+    "outputRows": 16,
+    "integrityInvalid": 0,
+    "integrityTotal": 16985,
+    "passed": false
+  },
+  {
+    "table": "payment_p2022_07",
+    "sourceRows": 0,
+    "outputRows": 2334,
+    "integrityInvalid": 0,
+    "integrityTotal": 19319,
+    "passed": false
+  },
+  {
+    "table": "rental",
+    "sourceRows": 0,
+    "outputRows": 16044,
+    "integrityInvalid": 0,
+    "integrityTotal": 35363,
+    "passed": false
+  },
+  {
+    "table": "staff",
+    "sourceRows": 0,
+    "outputRows": 2,
+    "integrityInvalid": 0,
+    "integrityTotal": 35365,
+    "passed": false
+  },
+  {
+    "table": "sales_by_store",
+    "sourceRows": 0,
+    "outputRows": 2,
+    "integrityInvalid": 0,
+    "integrityTotal": 35367,
+    "passed": false
+  },
+  {
+    "table": "staff_list",
+    "sourceRows": 0,
+    "outputRows": 2,
+    "integrityInvalid": 0,
+    "integrityTotal": 35369,
+    "passed": false
+  },
+  {
+    "table": "payment",
+    "sourceRows": 0,
+    "outputRows": 16049,
+    "integrityInvalid": 0,
+    "integrityTotal": 51418,
+    "passed": false
+  },
+  {
+    "table": "payment_p2022_02",
+    "sourceRows": 0,
+    "outputRows": 2401,
+    "integrityInvalid": 0,
+    "integrityTotal": 53819,
+    "passed": false
+  },
+  {
+    "table": "payment_p2022_03",
+    "sourceRows": 0,
+    "outputRows": 2713,
+    "integrityInvalid": 0,
+    "integrityTotal": 56532,
+    "passed": false
+  },
+  {
+    "table": "payment_p2022_05",
+    "sourceRows": 0,
+    "outputRows": 2677,
+    "integrityInvalid": 0,
+    "integrityTotal": 59209,
+    "passed": false
+  },
+  {
+    "table": "payment_p2022_06",
+    "sourceRows": 0,
+    "outputRows": 2654,
+    "integrityInvalid": 0,
+    "integrityTotal": 61863,
+    "passed": false
+  },
+  {
+    "table": "store",
+    "sourceRows": 0,
+    "outputRows": 2,
+    "integrityInvalid": 0,
+    "integrityTotal": 61865,
+    "passed": false
+  },
+  {
+    "table": "payment_p2022_01",
+    "sourceRows": 0,
+    "outputRows": 723,
+    "integrityInvalid": 0,
+    "integrityTotal": 62588,
+    "passed": false
+  },
+  {
+    "table": "payment_p2022_04",
+    "sourceRows": 0,
+    "outputRows": 2547,
+    "integrityInvalid": 0,
+    "integrityTotal": 65135,
+    "passed": false
+  }
+]

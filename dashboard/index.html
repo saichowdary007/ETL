@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>ETL Metrics Dashboard</title>
+  <style>
+    body { font-family: sans-serif; background: #f5f5f5; margin: 0; padding: 20px; }
+    #metrics { background: #fff; padding: 20px; border-radius: 8px; max-width: 400px; }
+    h2 { margin-top: 0; }
+    .metric { margin: 8px 0; }
+  </style>
+</head>
+<body>
+  <h1>ETL Metrics Dashboard</h1>
+  <div id="metrics">
+    <h2>Current Stats</h2>
+    <div class="metric" id="processed">Processed: 0</div>
+    <div class="metric" id="rate">Rate: 0/s</div>
+    <div class="metric" id="memory">Memory: 0 MB</div>
+    <div class="metric" id="time">Timestamp: -</div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <canvas id="rateChart" width="600" height="200"></canvas>
+  <canvas id="memChart" width="600" height="200"></canvas>
+
+  <script>
+    const rateCtx = document.getElementById('rateChart').getContext('2d');
+    const memCtx = document.getElementById('memChart').getContext('2d');
+
+    const rateChart = new Chart(rateCtx, {
+      type: 'line',
+      data: { labels: [], datasets: [{ label: 'Records/sec', data: [], borderColor: 'blue', fill: false }] },
+      options: { scales: { x: { display: false } } }
+    });
+
+    const memChart = new Chart(memCtx, {
+      type: 'line',
+      data: { labels: [], datasets: [{ label: 'Memory MB', data: [], borderColor: 'green', fill: false }] },
+      options: { scales: { x: { display: false } } }
+    });
+
+    function addPoint(chart, label, value) {
+      chart.data.labels.push(label);
+      chart.data.datasets[0].data.push(value);
+      if (chart.data.labels.length > 100) {
+        chart.data.labels.shift();
+        chart.data.datasets[0].data.shift();
+      }
+      chart.update();
+    }
+
+    const ws = new WebSocket('ws://localhost:9092');
+    ws.onmessage = (event) => {
+      const payload = JSON.parse(event.data);
+
+      if (payload.history) {
+        payload.history.forEach((pt) => handleData(pt));
+      } else {
+        handleData(payload);
+      }
+    };
+
+    function handleData(data) {
+      document.getElementById('processed').textContent = `Processed: ${data.processed}`;
+      document.getElementById('rate').textContent = `Rate: ${data.rate.toFixed(1)}/s`;
+      document.getElementById('memory').textContent = `Memory: ${data.memory.toFixed(1)} MB`;
+      const date = new Date(data.timestamp);
+      document.getElementById('time').textContent = `Timestamp: ${date.toLocaleTimeString()}`;
+
+      addPoint(rateChart, '', data.rate);
+      addPoint(memChart, '', data.memory);
+    }
+  </script>
+</body>
+</html> 

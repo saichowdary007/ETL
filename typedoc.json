@@ -1,0 +1,9 @@
+{
+  "entryPoints": ["src/index.ts"],
+  "out": "docs",
+  "tsconfig": "tsconfig.json",
+  "includeVersion": true,
+  "exclude": ["**/tests/**", "**/*.spec.ts"],
+  "githubPages": false,
+  "theme": "default"
+} 
